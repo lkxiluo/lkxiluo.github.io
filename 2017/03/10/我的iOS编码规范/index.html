@@ -41,7 +41,7 @@
 
 类名的命名规范
 1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的">
-<meta property="og:updated_time" content="2017-03-10T10:41:30.000Z">
+<meta property="og:updated_time" content="2017-03-10T10:44:00.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的iOS编码规范">
 <meta name="twitter:description" content="规范的要求级别
@@ -347,7 +347,7 @@
 <p>1.大驼峰命名法(A)<br>      类名的所有单词首字母必须大写<br>2.类名加前缀(B)<br>      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同<br>3.类名一般以其继承的类作结尾(B)<br>    例如<br>    QHLUserClass, NSString+QHLUserClass, QHLEditButton, QHLUserTableViewCell, QHLUserDetailViewController</p>
 </blockquote>
 <h2 id="方法的命名规范"><a href="#方法的命名规范" class="headerlink" title="方法的命名规范"></a>方法的命名规范</h2><blockquote>
-<p>1.小驼峰命名法(A)<br>      方法名和参数名的首字母小写，其余单词的首字母大写<br>2.方法名要清晰、简明，使用的单词能正确表达方法的作用(B)<br>3.Category的方法名前要加前缀，防止引用冲突(B)<br>      一般以两个或三个小写字母加“_”为前缀，本人使用三个小写字母，与类名的命名一致<br>4.方法名前“-”、“+”与返回值间有一个空格，方法实现开始的”{“在方法名的下一行(C)<br>5.当参数过长时，参数换行，以“:”对齐(C)<br>6.参数变量的声明类型与”<em>“以一个空格隔开(C)<br>    例如<br>    - (void)deleteUserWithId:(NSInteger)userId;<br>    - (BOOL)qhl_isPhoneNumber<br>      {<br>         return YES;<br>      }<br>    - (void)initUserWithId:(NSInteger)userId<br>                       name:(NSString </em>)userName<br>                        age:(NSInteger)age<br>                    grend:(NSString *)grend;</p>
+<p>1.小驼峰命名法(A)<br>      方法名和参数名的首字母小写，其余单词的首字母大写<br>2.方法名要清晰、简明，使用的单词能正确表达方法的作用(B)<br>3.Category的方法名前要加前缀，防止引用冲突(B)<br>      一般以两个或三个小写字母加“_”为前缀，本人使用三个小写字母，与类名的命名一致<br>4.方法名前“-”、“+”与返回值间有一个空格，方法实现开始的”{“在方法名的下一行(C)<br>5.当参数过长时，参数换行，以“:”对齐(C)<br>6.参数变量的声明类型与”<em>“以一个空格隔开(C)<br>    例如<br>    - (void)deleteUserWithId:(NSInteger)userId;<br>    - (BOOL)qhl_isPhoneNumber<br>      {<br>         return YES;<br>      }<br>    - (void)initUserWithId:(NSInteger)userId<br>                       name:(NSString </em>)userName<br>                        age:(NSInteger)age<br>                     gender:(NSString *)gender;</p>
 </blockquote>
 <h2 id="property-属性的命名规范"><a href="#property-属性的命名规范" class="headerlink" title="(property)属性的命名规范"></a>(property)属性的命名规范</h2><blockquote>
 <p>1.小驼峰命名法(A)<br>      属性名首字母小写，其余单词的首字母大写<br>2.属性类型如有“<em>”，则“</em>”靠近属性名，变量名左对齐(C)<br>3.属性名以声明的类型能表达其类型的单词结尾(B)<br>4.变量名遵循属性的命名规范, 同时以”_”为前缀(B)</p>
@@ -361,10 +361,11 @@
 </code></pre><h2 id="protocol-协议的命名规范"><a href="#protocol-协议的命名规范" class="headerlink" title="(protocol)协议的命名规范"></a>(protocol)协议的命名规范</h2><blockquote>
 <p>1.大驼峰命名法，与类命名规则一样(A)<br>2.协议名加前缀，与类命名规则一样(B)<br>3.一般的协议名以Protocol结尾(B)<br>4.委托代理</p>
 <blockquote>
-<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)<br>例如 </p>
+<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)</p>
 </blockquote>
 </blockquote>
-<pre><code>@protocol QHLUserModelProtocol &lt;NSObject&gt;
+<pre><code>例如 
+@protocol QHLUserModelProtocol &lt;NSObject&gt;
 @end
 @protocol UITableViewDataSource &lt;NSObject, UIScrollViewDelegate&gt;
 \- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
@@ -373,10 +374,10 @@
 <p>1.所属类名+作用(B)<br>2.定义在.h文件时，枚举成员以枚举名+成员名(B)<br>3.定义在.m文件时，枚举成员以小写”k”为前缀+成员名(C)<br>4.声明枚举时使用NS_ENUM、NS_OPTIONS而不使用enum(B)<br>5.当代码实现中使用到(if或switch)0、1、2、3···等数字进行判断是，使用枚举代替（C）</p>
 </blockquote>
 <pre><code>例如
-typedef NS_ENUM(NSInteger, QHLUserClassGrend) {
-    QHLUserClassGrendUnknow = 0,    // 未知性别
-    QHLUserClassGrendMan,           // 男性
-    QHLUserClassGrendwomen          // 女性
+typedef NS_ENUM(NSInteger, QHLUserClassGender) {
+    QHLUserClassGenderUnknow = 0,    // 未知性别
+    QHLUserClassGenderMan,           // 男性
+    QHLUserClassGenderwomen          // 女性
 };
 </code></pre><h2 id="宏或全局常量命名规范dd"><a href="#宏或全局常量命名规范dd" class="headerlink" title="宏或全局常量命名规范dd"></a>宏或全局常量命名规范dd</h2>
       
@@ -389,7 +390,7 @@ typedef NS_ENUM(NSInteger, QHLUserClassGrend) {
         <p><span>本文标题:</span><a href="/2017/03/10/我的iOS编码规范/">我的iOS编码规范</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">浅寒</a></p>
         <p><span>发布时间:</span>2017-03-10, 09:38:59</p>
-        <p><span>最后更新:</span>2017-03-10, 18:41:30</p>
+        <p><span>最后更新:</span>2017-03-10, 18:44:00</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/10/我的iOS编码规范/" title="我的iOS编码规范">https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/</a>
             <span class="copy-path" data-clipboard-text="原文: https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/　　作者: 浅寒" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
