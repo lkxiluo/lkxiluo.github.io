@@ -41,7 +41,7 @@
 
 类名的命名规范
 1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的">
-<meta property="og:updated_time" content="2017-03-10T09:23:01.000Z">
+<meta property="og:updated_time" content="2017-03-10T09:24:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的iOS编码规范">
 <meta name="twitter:description" content="规范的要求级别
@@ -355,7 +355,7 @@
 <h2 id="protocol-协议的命名规范"><a href="#protocol-协议的命名规范" class="headerlink" title="(protocol)协议的命名规范"></a>(protocol)协议的命名规范</h2><blockquote>
 <p>1.大驼峰命名法，与类命名规则一样(A)<br>2.协议名加前缀，与类命名规则一样(B)<br>3.一般的协议名以Protocol结尾(B)<br>4.委托代理</p>
 <blockquote>
-<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)<br>例如<br>@protocol QHLUserModelProtocol \<nsobject\><br>@end<br>@protocol UITableViewDataSource \<nsobject, uiscrollviewdelegate\=""></nsobject,></nsobject\></p>
+<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)<br>例如<br>@protocol QHLUserModelProtocol <nsobject><br>@end<br>@protocol UITableViewDataSource <nsobject, uiscrollviewdelegate=""></nsobject,></nsobject></p>
 <ul>
 <li>(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;<br>@end</li>
 </ul>
@@ -372,7 +372,7 @@
         <p><span>本文标题:</span><a href="/2017/03/10/我的iOS编码规范/">我的iOS编码规范</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">浅寒</a></p>
         <p><span>发布时间:</span>2017-03-10, 09:38:59</p>
-        <p><span>最后更新:</span>2017-03-10, 17:23:01</p>
+        <p><span>最后更新:</span>2017-03-10, 17:24:36</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/10/我的iOS编码规范/" title="我的iOS编码规范">https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/</a>
             <span class="copy-path" data-clipboard-text="原文: https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/　　作者: 浅寒" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

@@ -317,7 +317,7 @@
 <h2 id="protocol-协议的命名规范"><a href="#protocol-协议的命名规范" class="headerlink" title="(protocol)协议的命名规范"></a>(protocol)协议的命名规范</h2><blockquote>
 <p>1.大驼峰命名法，与类命名规则一样(A)<br>2.协议名加前缀，与类命名规则一样(B)<br>3.一般的协议名以Protocol结尾(B)<br>4.委托代理</p>
 <blockquote>
-<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)<br>例如<br>@protocol QHLUserModelProtocol \<nsobject\><br>@end<br>@protocol UITableViewDataSource \<nsobject, uiscrollviewdelegate\=""></nsobject,></nsobject\></p>
+<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)<br>例如<br>@protocol QHLUserModelProtocol <nsobject><br>@end<br>@protocol UITableViewDataSource <nsobject, uiscrollviewdelegate=""></nsobject,></nsobject></p>
 <ul>
 <li>(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;<br>@end</li>
 </ul>
