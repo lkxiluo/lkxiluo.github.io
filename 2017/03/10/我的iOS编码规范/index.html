@@ -15,7 +15,7 @@
 
 
 
-<meta name="description" content="规范的要求级别
+<meta name="description" content="规范的级别
 强制使用(A)
 强烈推荐(B)
 可选性(C)
@@ -25,12 +25,12 @@
 任何命名都要准确表达其用途(B)
 
 类名的命名规范
-1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的">
+1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的类作">
 <meta property="og:type" content="article">
 <meta property="og:title" content="我的iOS编码规范">
 <meta property="og:url" content="https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/index.html">
 <meta property="og:site_name" content="Qianhan">
-<meta property="og:description" content="规范的要求级别
+<meta property="og:description" content="规范的级别
 强制使用(A)
 强烈推荐(B)
 可选性(C)
@@ -40,11 +40,11 @@
 任何命名都要准确表达其用途(B)
 
 类名的命名规范
-1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的">
-<meta property="og:updated_time" content="2017-03-10T11:09:57.000Z">
+1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的类作">
+<meta property="og:updated_time" content="2017-03-10T12:20:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="我的iOS编码规范">
-<meta name="twitter:description" content="规范的要求级别
+<meta name="twitter:description" content="规范的级别
 强制使用(A)
 强烈推荐(B)
 可选性(C)
@@ -54,7 +54,7 @@
 任何命名都要准确表达其用途(B)
 
 类名的命名规范
-1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的">
+1.大驼峰命名法(A)      类名的所有单词首字母必须大写2.类名加前缀(B)      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同3.类名一般以其继承的类作">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -334,7 +334,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="规范的要求级别"><a href="#规范的要求级别" class="headerlink" title="规范的要求级别"></a>规范的要求级别</h1><ul>
+        <h1 id="规范的级别"><a href="#规范的级别" class="headerlink" title="规范的级别"></a>规范的级别</h1><ul>
 <li>强制使用(A)</li>
 <li>强烈推荐(B)</li>
 <li>可选性(C)</li>
@@ -398,7 +398,34 @@ typedef NS_ENUM(NSInteger, QHLUserClassGender) {
 NSString * const QHLUserClassGender = @&quot;男&quot;;
 \#define QHLUSERCLASS_GENDER     @&quot;男&quot;
 \#define QHLUSERCLASS_UPDATE_USERNAME_NOTIFICATE @&quot;QHLUSERCLASS_UPDATE_USERNAME_NOTIFICATE&quot;
-</code></pre><h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1>
+</code></pre><h2 id="图标命名规范"><a href="#图标命名规范" class="headerlink" title="图标命名规范"></a>图标命名规范</h2><blockquote>
+<p>1.图标都以小写字母命名，各个单词间用”<em>“隔开(B)<br>2.图标的命名结构为:“功能模块名</em>作用名_状态”，正常状态用”normal”，高亮用”hl”，两倍图加”@2x”，三倍图加“@3x”(B)<br>例如<br>home_edit_normal@2x.png为首页正常状态的2倍编辑图标</p>
+</blockquote>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><blockquote>
+<p>1.类和方法的注释以Xcode自带的注释格式为准(C)<br>2.单行的注释以“//”+注释内容，位置为该行的上方(C)<br>3.多行(代码块)使用“/<strong> 注释内容 </strong>/”注释，位置为代码块第一行的上方(C)<br>4.属性、变量、枚举怎在相应行的结尾以“//”+注释内容注释(C)<br>5.对未实现、待实现的内容以”//TODO:”+注释内容标注(C)<br>6.功能块以”#pragma mark - “+注释，比如“#pragma mark - getter/setter”(C)<br>7.子功能块以”#pragma mark -“+注释(C)</p>
+<blockquote>
+<p>例如</p>
+<p>#pragma mark - delegate</p>
+<p>#pragma mark -TableViewDelegate<br>8.宏和全局常量则在其上面以”/<strong> 注释内容 </strong>/“进行注释</p>
+</blockquote>
+</blockquote>
+<h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><blockquote>
+<p>1.每个代码块间各一行(C)<br>2.不管代码的多少，if、switch语句中都使用”{}”，并且”{“隔一个空格接在第一行之后，每个分之以一行为间隔(C)</p>
+</blockquote>
+<pre><code>例如
+- (NSString *)getUserName
+{
+    if (条件) {
+        return @&quot;&quot;;
+
+    } else {
+        retrun @&quot;&quot;;
+    }
+}
+</code></pre><h1 id="其余-D"><a href="#其余-D" class="headerlink" title="其余(D)"></a>其余(D)</h1><h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><blockquote>
+<p>待补充</p>
+</blockquote>
+
       
     </div>
     
@@ -409,7 +436,7 @@ NSString * const QHLUserClassGender = @&quot;男&quot;;
         <p><span>本文标题:</span><a href="/2017/03/10/我的iOS编码规范/">我的iOS编码规范</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">浅寒</a></p>
         <p><span>发布时间:</span>2017-03-10, 09:38:59</p>
-        <p><span>最后更新:</span>2017-03-10, 19:09:57</p>
+        <p><span>最后更新:</span>2017-03-10, 20:20:55</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/03/10/我的iOS编码规范/" title="我的iOS编码规范">https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/</a>
             <span class="copy-path" data-clipboard-text="原文: https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/　　作者: 浅寒" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -428,7 +455,7 @@ NSString * const QHLUserClassGender = @&quot;男&quot;;
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#规范的要求级别"><span class="toc-number">1.</span> <span class="toc-text">规范的要求级别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命名规范"><span class="toc-number">2.</span> <span class="toc-text">命名规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#类名的命名规范"><span class="toc-number">2.1.</span> <span class="toc-text">类名的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法的命名规范"><span class="toc-number">2.2.</span> <span class="toc-text">方法的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#property-属性的命名规范"><span class="toc-number">2.3.</span> <span class="toc-text">(property)属性的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#protocol-协议的命名规范"><span class="toc-number">2.4.</span> <span class="toc-text">(protocol)协议的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举的命名规范"><span class="toc-number">2.5.</span> <span class="toc-text">枚举的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏或全局常量命名规范"><span class="toc-number">2.6.</span> <span class="toc-text">宏或全局常量命名规范</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注释"><span class="toc-number">3.</span> <span class="toc-text">注释</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#规范的级别"><span class="toc-number">1.</span> <span class="toc-text">规范的级别</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#命名规范"><span class="toc-number">2.</span> <span class="toc-text">命名规范</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#类名的命名规范"><span class="toc-number">2.1.</span> <span class="toc-text">类名的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#方法的命名规范"><span class="toc-number">2.2.</span> <span class="toc-text">方法的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#property-属性的命名规范"><span class="toc-number">2.3.</span> <span class="toc-text">(property)属性的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#protocol-协议的命名规范"><span class="toc-number">2.4.</span> <span class="toc-text">(protocol)协议的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#枚举的命名规范"><span class="toc-number">2.5.</span> <span class="toc-text">枚举的命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#宏或全局常量命名规范"><span class="toc-number">2.6.</span> <span class="toc-text">宏或全局常量命名规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#图标命名规范"><span class="toc-number">2.7.</span> <span class="toc-text">图标命名规范</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#注释"><span class="toc-number">3.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#代码风格"><span class="toc-number">4.</span> <span class="toc-text">代码风格</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#其余-D"><span class="toc-number">5.</span> <span class="toc-text">其余(D)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#备注"><span class="toc-number">6.</span> <span class="toc-text">备注</span></a></li></ol>
         
     </div>
     <style>

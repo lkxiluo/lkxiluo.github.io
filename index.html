@@ -296,7 +296,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="规范的要求级别"><a href="#规范的要求级别" class="headerlink" title="规范的要求级别"></a>规范的要求级别</h1><ul>
+        <h1 id="规范的级别"><a href="#规范的级别" class="headerlink" title="规范的级别"></a>规范的级别</h1><ul>
 <li>强制使用(A)</li>
 <li>强烈推荐(B)</li>
 <li>可选性(C)</li>
@@ -360,7 +360,34 @@ typedef NS_ENUM(NSInteger, QHLUserClassGender) {
 NSString * const QHLUserClassGender = @&quot;男&quot;;
 \#define QHLUSERCLASS_GENDER     @&quot;男&quot;
 \#define QHLUSERCLASS_UPDATE_USERNAME_NOTIFICATE @&quot;QHLUSERCLASS_UPDATE_USERNAME_NOTIFICATE&quot;
-</code></pre><h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1>
+</code></pre><h2 id="图标命名规范"><a href="#图标命名规范" class="headerlink" title="图标命名规范"></a>图标命名规范</h2><blockquote>
+<p>1.图标都以小写字母命名，各个单词间用”<em>“隔开(B)<br>2.图标的命名结构为:“功能模块名</em>作用名_状态”，正常状态用”normal”，高亮用”hl”，两倍图加”@2x”，三倍图加“@3x”(B)<br>例如<br>home_edit_normal@2x.png为首页正常状态的2倍编辑图标</p>
+</blockquote>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><blockquote>
+<p>1.类和方法的注释以Xcode自带的注释格式为准(C)<br>2.单行的注释以“//”+注释内容，位置为该行的上方(C)<br>3.多行(代码块)使用“/<strong> 注释内容 </strong>/”注释，位置为代码块第一行的上方(C)<br>4.属性、变量、枚举怎在相应行的结尾以“//”+注释内容注释(C)<br>5.对未实现、待实现的内容以”//TODO:”+注释内容标注(C)<br>6.功能块以”#pragma mark - “+注释，比如“#pragma mark - getter/setter”(C)<br>7.子功能块以”#pragma mark -“+注释(C)</p>
+<blockquote>
+<p>例如</p>
+<p>#pragma mark - delegate</p>
+<p>#pragma mark -TableViewDelegate<br>8.宏和全局常量则在其上面以”/<strong> 注释内容 </strong>/“进行注释</p>
+</blockquote>
+</blockquote>
+<h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><blockquote>
+<p>1.每个代码块间各一行(C)<br>2.不管代码的多少，if、switch语句中都使用”{}”，并且”{“隔一个空格接在第一行之后，每个分之以一行为间隔(C)</p>
+</blockquote>
+<pre><code>例如
+- (NSString *)getUserName
+{
+    if (条件) {
+        return @&quot;&quot;;
+
+    } else {
+        retrun @&quot;&quot;;
+    }
+}
+</code></pre><h1 id="其余-D"><a href="#其余-D" class="headerlink" title="其余(D)"></a>其余(D)</h1><h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><blockquote>
+<p>待补充</p>
+</blockquote>
+
       
     </div>
     
