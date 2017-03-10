@@ -306,14 +306,7 @@
 <p>1.大驼峰命名法（A）<br>      类的命名所以单词的首字母必须大写<br>2.类名加前缀（B）<br>      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同<br>3.类名一般以其继承的类作结尾(B)<br>例如<br>QHLUserClass, NSString+QHLUserClass, QHLEditButton, QHLUserTableViewCell, QHLUserDetailViewController</p>
 </blockquote>
 <h2 id="方法规范"><a href="#方法规范" class="headerlink" title="方法规范"></a>方法规范</h2><blockquote>
-<p>1.小驼峰命名法（A）<br>      方法名和参数名的首字母小写，其余单词的首字母大写<br>2.方法名要清晰、简明，使用的单词能正确表达方法的作用（B）<br>3.Category的方法名前要加前缀，防止引用冲突（B）<br>      一般以两个或三个小写字母加“_”为前缀，本人使用三个小写字母，与类名的命名一致<br>4.方法名前“-”、“+”与返回值间有一个空格，方法实现开始的”{“在方法名的下一行（C）<br>5.当参数过长时，参数换行，以“:”对齐（C）<br>例如</p>
-<ul>
-<li>(void)deleteUserWithUserId:(NSInteger)userId;<ul>
-<li>(BOOL)qhl_isPhoneNumber<br>{<pre><code>return YES;
-</code></pre>}</li>
-</ul>
-</li>
-</ul>
+<p>1.小驼峰命名法（A）<br>      方法名和参数名的首字母小写，其余单词的首字母大写<br>2.方法名要清晰、简明，使用的单词能正确表达方法的作用（B）<br>3.Category的方法名前要加前缀，防止引用冲突（B）<br>      一般以两个或三个小写字母加“_”为前缀，本人使用三个小写字母，与类名的命名一致<br>4.方法名前“-”、“+”与返回值间有一个空格，方法实现开始的”{“在方法名的下一行（C）<br>5.当参数过长时，参数换行，以“:”对齐（C）<br>例如<br>- (void)deleteUserWithUserId:(NSInteger)userId;<br>    - (BOOL)qhl_isPhoneNumber<br>      {<br>          return YES;<br>      }</p>
 </blockquote>
 
       
