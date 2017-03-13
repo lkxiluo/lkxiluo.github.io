@@ -324,7 +324,7 @@ QHLUserClass, NSString+QHLUserClass, QHLEditButton, QHLUserTableViewCell, QHLUse
                     age:(NSInteger)age
                  gender:(NSString *)gender;
 </code></pre><h2 id="property-属性的命名规范"><a href="#property-属性的命名规范" class="headerlink" title="(property)属性的命名规范"></a>(property)属性的命名规范</h2><blockquote>
-<p>1.小驼峰命名法(A)<br>      属性名首字母小写，其余单词的首字母大写<br>2.属性类型如有“<em>”，则“</em>”靠近属性名，变量名左对齐(C)<br>3.属性名以声明的类型能表达其类型的单词结尾(B)<br>4.变量名遵循属性的命名规范, 同时以”_”为前缀(B)</p>
+<p>1.小驼峰命名法(A)<br>      属性名首字母小写，其余单词的首字母大写<br>2.属性类型如有“*”，则“*”靠近属性名，变量名左对齐(C)<br>3.属性名以声明的类型能表达其类型的单词结尾(B)<br>4.变量名遵循属性的命名规范, 同时以”_”为前缀(B)</p>
 </blockquote>
 <pre><code>例如
 @property (nonatomic, strong) UIView    *childContaintView;
@@ -368,8 +368,9 @@ NSString * const QHLUserClassGender = @&quot;男&quot;;
 <blockquote>
 <p>例如</p>
 <p>#pragma mark - delegate</p>
-<p>#pragma mark -TableViewDelegate<br>8.宏和全局常量则在其上面以”/<strong> 注释内容 </strong>/“进行注释</p>
+<p>#pragma mark -TableViewDelegate</p>
 </blockquote>
+<p>8.宏和全局常量则在其上面以”/<strong> 注释内容 </strong>/“进行注释</p>
 </blockquote>
 <h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><blockquote>
 <p>1.每个代码块间各一行(C)<br>2.不管代码的多少，if、switch语句中都使用”{}”，并且”{“隔一个空格接在第一行之后，每个分支以一行间隔(C)</p>
