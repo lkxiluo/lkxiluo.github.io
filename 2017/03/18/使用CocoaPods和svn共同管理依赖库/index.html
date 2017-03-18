@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Cocoadpos svn 依赖库 iOS," />
 
 
 
@@ -87,12 +87,31 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Qianhan">
-<meta property="og:url" content="https://lkxiluo.github.io/index.html">
+<meta name="description" content="我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的《用CocoaPods做iOS程序的依赖管理》这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。
+接下来我将描述如何使用CocoaPods和svn共同管理依赖库
+
+创建一个框架命名为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用CocoaPods和svn共同管理依赖库">
+<meta property="og:url" content="https://lkxiluo.github.io/2017/03/18/使用CocoaPods和svn共同管理依赖库/index.html">
 <meta property="og:site_name" content="Qianhan">
+<meta property="og:description" content="我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的《用CocoaPods做iOS程序的依赖管理》这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。
+接下来我将描述如何使用CocoaPods和svn共同管理依赖库
+
+创建一个框架命名为">
+<meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-1.png">
+<meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-2.png">
+<meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-3.png">
+<meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-4.png">
+<meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-5.png">
+<meta property="og:updated_time" content="2017-03-18T06:08:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qianhan">
+<meta name="twitter:title" content="使用CocoaPods和svn共同管理依赖库">
+<meta name="twitter:description" content="我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的《用CocoaPods做iOS程序的依赖管理》这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。
+接下来我将描述如何使用CocoaPods和svn共同管理依赖库
+
+创建一个框架命名为">
+<meta name="twitter:image" content="https://lkxiluo.github.io/images/2017-03-18-1.png">
 
 
 
@@ -120,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="https://lkxiluo.github.io/"/>
+  <link rel="canonical" href="https://lkxiluo.github.io/2017/03/18/使用CocoaPods和svn共同管理依赖库/"/>
 
 
 
 
 
-  <title> Qianhan </title>
+  <title> 使用CocoaPods和svn共同管理依赖库 | Qianhan </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -151,9 +170,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -236,9 +253,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -268,10 +285,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2017/03/18/使用CocoaPods和svn共同管理依赖库/" itemprop="url">
-                  使用CocoaPods和svn共同管理依赖库
-                </a>
+                使用CocoaPods和svn共同管理依赖库
               
             
           </h1>
@@ -332,9 +346,7 @@
       
 
       
-        
-          
-            <p>我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的<a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">《用CocoaPods做iOS程序的依赖管理》</a>这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。</p>
+        <p>我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的<a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">《用CocoaPods做iOS程序的依赖管理》</a>这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。</p>
 <p>接下来我将描述如何使用CocoaPods和svn共同管理依赖库</p>
 <ol>
 <li>创建一个框架命名为QHLUtil，再添加一些自己需要的类到QHLUtil中，编译顺利完成后，使用Cornerstone将QHLUtil项目导入已创建的文件目录下，结果如图:<br><img src="/images/2017-03-18-1.png" alt="Alt text"></li>
@@ -391,264 +403,72 @@ end
 </code></pre></li>
 </ol>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://lkxiluo.github.io/2017/03/10/我的iOS编码规范/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="浅寒">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Qianhan">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/10/我的iOS编码规范/" itemprop="url">
-                  我的iOS编码规范
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-10T09:38:59+08:00">
-                2017-03-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/Cocoadpos-svn-依赖库-iOS/" rel="tag"># Cocoadpos svn 依赖库 iOS</a>
           
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/10/我的iOS编码规范/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/10/我的iOS编码规范/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
         
-          
-            <h1 id="规范的级别"><a href="#规范的级别" class="headerlink" title="规范的级别"></a>规范的级别</h1><ul>
-<li>强制使用(A)</li>
-<li>强烈推荐(B)</li>
-<li>可选性(C)</li>
-<li>不建议(D)</li>
-</ul>
-<h1 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h1><blockquote>
-<p>任何命名都要准确表达其用途(B)</p>
-</blockquote>
-<h2 id="类名的命名规范"><a href="#类名的命名规范" class="headerlink" title="类名的命名规范"></a>类名的命名规范</h2><blockquote>
-<p>1.大驼峰命名法(A)<br>      类名的所有单词首字母必须大写<br>2.类名加前缀(B)<br>      为防止与其他依赖类库的冲突，苹果享有两位前缀的使用权，所以前缀一般为三个大写字母，比如说作者名首字母大写，公司名首字母大写，Category雷同<br>3.类名一般以其继承的类作结尾(B)</p>
-</blockquote>
-<pre><code>例如
-QHLUserClass, NSString+QHLUserClass, QHLEditButton, QHLUserTableViewCell, QHLUserDetailViewController
-</code></pre><h2 id="方法的命名规范"><a href="#方法的命名规范" class="headerlink" title="方法的命名规范"></a>方法的命名规范</h2><blockquote>
-<p>1.小驼峰命名法(A)<br>      方法名和参数名的首字母小写，其余单词的首字母大写<br>2.方法名要清晰、简明，使用的单词能正确表达方法的作用(B)<br>3.Category的方法名前要加前缀，防止引用冲突(B)<br>      一般以两个或三个小写字母加“_”为前缀，本人使用三个小写字母，与类名的命名一致<br>4.方法名前“-”、“+”与返回值间有一个空格，方法实现开始的”{“在方法名的下一行(C)<br>5.当参数过长时，参数换行，以“:”对齐(C)<br>6.参数变量的声明类型与”*”以一个空格隔开(C)</p>
-</blockquote>
-<pre><code>例如
-\- (void)deleteUserWithId:(NSInteger)userId;
-\- (BOOL)qhl_isPhoneNumber
-  {
-     return YES;
-  }
-\- (void)initUserWithId:(NSInteger)userId
-                   name:(NSString *)userName
-                    age:(NSInteger)age
-                 gender:(NSString *)gender;
-</code></pre><h2 id="property-属性的命名规范"><a href="#property-属性的命名规范" class="headerlink" title="(property)属性的命名规范"></a>(property)属性的命名规范</h2><blockquote>
-<p>1.小驼峰命名法(A)<br>      属性名首字母小写，其余单词的首字母大写<br>2.属性类型如有“*”，则“*”靠近属性名，变量名左对齐(C)<br>3.属性名以声明的类型能表达其类型的单词结尾(B)<br>4.变量名遵循属性的命名规范, 同时以”_”为前缀(B)</p>
-</blockquote>
-<pre><code>例如
-@property (nonatomic, strong) UIView    *childContaintView;
-@property (nonatomic, strong) UIButton  *editButton;
-@interface QHLUserClass () {
-    UITextField  *_userNameTextField;
-}
-</code></pre><h2 id="protocol-协议的命名规范"><a href="#protocol-协议的命名规范" class="headerlink" title="(protocol)协议的命名规范"></a>(protocol)协议的命名规范</h2><blockquote>
-<p>1.大驼峰命名法，与类命名规则一样(A)<br>2.协议名加前缀，与类命名规则一样(B)<br>3.一般的协议名以Protocol结尾(B)<br>4.委托代理</p>
-<blockquote>
-<p>a.如果协议的作用是委托类获取数据则协议名形式为“类名+DataSource”(B)<br>b.如果协议的作用是委托类实现操作则协议名形式为“类名+Delegate”(B)<br>c.协议中的方法名参数必须有一个是委托类(B)</p>
-</blockquote>
-</blockquote>
-<pre><code>例如 
-@protocol QHLUserModelProtocol &lt;NSObject&gt;
-@end
-@protocol UITableViewDataSource &lt;NSObject, UIScrollViewDelegate&gt;
-\- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView;
-@end
-</code></pre><h2 id="枚举的命名规范"><a href="#枚举的命名规范" class="headerlink" title="枚举的命名规范"></a>枚举的命名规范</h2><blockquote>
-<p>1.所属类名+作用(B)<br>2.定义在.h文件时，枚举成员以枚举名+成员名(B)<br>3.定义在.m文件时，枚举成员以小写”k”为前缀+成员名(C)<br>4.声明枚举时使用NS_ENUM、NS_OPTIONS而不使用enum(B)<br>5.当代码实现中使用到(if或switch)0、1、2、3···等数字进行判断是，使用枚举代替（C）</p>
-</blockquote>
-<pre><code>例如
-typedef NS_ENUM(NSInteger, QHLUserClassGender) {
-    QHLUserClassGenderUnknow = 0,    // 未知性别
-    QHLUserClassGenderMan,           // 男性
-    QHLUserClassGenderwomen          // 女性
-};
-</code></pre><h2 id="宏或全局常量命名规范"><a href="#宏或全局常量命名规范" class="headerlink" title="宏或全局常量命名规范"></a>宏或全局常量命名规范</h2><blockquote>
-<p>1.使用固定值时，优先使用常量定义，再使用宏(C)<br>2.声明在.h文件的常量以该(文件)类类名为前缀+每个单词首字母大写的常量名(B)<br>3.声明在.m文件的常量以小写”k”为前缀+每个单词首字母大写的常量名(C)<br>4.宏定义的所有字母都为大写，也以该(文件)类类名为前缀，并且每个单词以”_”隔开(B)<br>5.一些特殊的宏或常量以特殊单词结尾，比如说通知以NOTIFICATE或Notificate结尾</p>
-</blockquote>
-<pre><code>例如
-NSString * const QHLUserClassGender = @&quot;男&quot;;
-\#define QHLUSERCLASS_GENDER     @&quot;男&quot;
-\#define QHLUSERCLASS_UPDATE_USERNAME_NOTIFICATE @&quot;QHLUSERCLASS_UPDATE_USERNAME_NOTIFICATE&quot;
-</code></pre><h2 id="图标命名规范"><a href="#图标命名规范" class="headerlink" title="图标命名规范"></a>图标命名规范</h2><blockquote>
-<p>1.图标都以小写字母命名，各个单词间用”<em>“隔开(B)<br>2.图标的命名结构为:“功能模块名</em>作用名_状态”，正常状态用”normal”，高亮用”hl”，两倍图加”@2x”，三倍图加“@3x”(B)<br>例如<br>home_edit_normal@2x.png为首页正常状态的2倍编辑图标</p>
-</blockquote>
-<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><blockquote>
-<p>1.类和方法的注释以Xcode自带的注释格式为准(C)<br>2.单行的注释以“//”+注释内容，位置为该行的上方(C)<br>3.多行(代码块)使用“/<strong> 注释内容 </strong>/”注释，位置为代码块第一行的上方(C)<br>4.属性、变量、枚举怎在相应行的结尾以“//”+注释内容注释(C)<br>5.对未实现、待实现的内容以”//TODO:”+注释内容标注(C)<br>6.功能块以”#pragma mark - “+注释，比如“#pragma mark - getter/setter”(C)<br>7.子功能块以”#pragma mark -“+注释(C)</p>
-<blockquote>
-<p>例如</p>
-<p>#pragma mark - delegate</p>
-<p>#pragma mark -TableViewDelegate</p>
-</blockquote>
-<p>8.宏和全局常量则在其上面以”/<strong> 注释内容 </strong>/“进行注释</p>
-</blockquote>
-<h1 id="代码风格"><a href="#代码风格" class="headerlink" title="代码风格"></a>代码风格</h1><blockquote>
-<p>1.每个代码块间各一行(C)<br>2.不管代码的多少，if、switch语句中都使用”{}”，并且”{“隔一个空格接在第一行之后，每个分支以一行间隔(C)</p>
-</blockquote>
-<pre><code>例如
-- (NSString *)getUserName
-{
-    if (条件) {
-        return @&quot;&quot;;
-
-    } else {
-        retrun @&quot;&quot;;
-    }
-}
-</code></pre><h1 id="其余-D"><a href="#其余-D" class="headerlink" title="其余(D)"></a>其余(D)</h1><h1 id="备注"><a href="#备注" class="headerlink" title="备注"></a>备注</h1><blockquote>
-<p>待补充</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
       
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/10/我的iOS编码规范/" rel="next" title="我的iOS编码规范">
+                <i class="fa fa-chevron-left"></i> 我的iOS编码规范
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
           
           </div>
@@ -656,6 +476,14 @@ NSString * const QHLUserClassGender = @&quot;男&quot;;
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2017/03/18/使用CocoaPods和svn共同管理依赖库/"
+           data-title="使用CocoaPods和svn共同管理依赖库" data-url="https://lkxiluo.github.io/2017/03/18/使用CocoaPods和svn共同管理依赖库/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -841,6 +669,10 @@ NSString * const QHLUserClassGender = @&quot;男&quot;;
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
