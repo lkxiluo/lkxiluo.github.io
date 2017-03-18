@@ -89,28 +89,28 @@
 
 <meta name="description" content="我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的《用CocoaPods做iOS程序的依赖管理》这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。
 接下来我将描述如何使用CocoaPods和svn共同管理依赖库
-
-创建一个框架命名为">
+操作说明
+创建一个框">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用CocoaPods和svn共同管理依赖库">
 <meta property="og:url" content="https://lkxiluo.github.io/2017/03/18/使用CocoaPods和svn共同管理依赖库/index.html">
 <meta property="og:site_name" content="Qianhan">
 <meta property="og:description" content="我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的《用CocoaPods做iOS程序的依赖管理》这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。
 接下来我将描述如何使用CocoaPods和svn共同管理依赖库
-
-创建一个框架命名为">
+操作说明
+创建一个框">
 <meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-1.png">
 <meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-2.png">
 <meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-3.png">
 <meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-4.png">
 <meta property="og:image" content="https://lkxiluo.github.io/images/2017-03-18-5.png">
-<meta property="og:updated_time" content="2017-03-18T06:10:47.000Z">
+<meta property="og:updated_time" content="2017-03-18T06:14:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用CocoaPods和svn共同管理依赖库">
 <meta name="twitter:description" content="我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的《用CocoaPods做iOS程序的依赖管理》这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。
 接下来我将描述如何使用CocoaPods和svn共同管理依赖库
-
-创建一个框架命名为">
+操作说明
+创建一个框">
 <meta name="twitter:image" content="https://lkxiluo.github.io/images/2017-03-18-1.png">
 
 
@@ -348,7 +348,7 @@
       
         <p>我们在开发过程中经常会需要依赖第三方库或我们自己的私有库（本地库），关于依赖第三方库和Cocoapods的使用这里就不做赘述了，大家可以看唐巧的<a href="http://blog.devtang.com/2014/05/25/use-cocoapod-to-manage-ios-lib-dependency/" target="_blank" rel="external">《用CocoaPods做iOS程序的依赖管理》</a>这篇文章，我这里只记录我使用CocoaPods和svn共同管理私有库的过程，svn管理工具我使用的是Cornerstone。</p>
 <p>接下来我将描述如何使用CocoaPods和svn共同管理依赖库</p>
-<ol>
+<h1 id="操作说明"><a href="#操作说明" class="headerlink" title="操作说明"></a>操作说明</h1><ol>
 <li>创建一个框架命名为QHLUtil，再添加一些自己需要的类到QHLUtil中，编译顺利完成后，使用Cornerstone将QHLUtil项目导入已创建的文件目录下，结果如图:<br><img src="/images/2017-03-18-1.png" alt="Alt text"></li>
 <li>打开终端，执行<pre><code>cd ~/Documents/ProjectManagerTest/QHLUtil
 </code></pre>~/Documents/ProjectManagerTest/QHLUtil这是我创建项目的路径，根据你创建项目的路径进行修改</li>
@@ -390,20 +390,18 @@ pod &apos;QHLUtil&apos;, :svn=&gt;&apos;svn://192.168.6.5:9600/wzhouhui/app/ios/
 end
 </code></pre><p>svn://192.168.6.5:9600/wzhouhui/app/ios/ProjectManagerTest/QHLUtil为你私有库文件目录</p>
 </li>
-<li>建立依赖关系，这里有两种情况<blockquote>
+<li><p>建立依赖关系，这里有两种情况</p>
+<blockquote>
 <p>a. 直接执行命令</p>
 <pre><code>pod install
-</code></pre><p>完成依赖关联<br>b. 根据版本进行管理<br>进入QHLUtil文件目录，创建名为tags的文件，如图：<br><img src="/images/2017-03-18-2.png" alt="tags"><br>将tags文件夹同步到svn，打开Cornerstone，右击QHLUtil项目，创建改项目的一个版本tag，如图：<br><img src="/images/2017-03-18-3.png" alt="tag"><br>填写tag的信息<br><img src="/images/2017-03-18-4.png" alt="tag as"><br>Tag信息说明：<br>Tag As为版本号，将与QHLUtil.podspec文件中的s.version= “0.0.1”相同 </p>
-<p>Where为保存路径，保存在刚才创建的tags文件夹下，此目录要正确，因为关联时获取资源就是根据s.source= { :svn =&gt; “svn://192.168.6.5:9600/wzhouhui/app/ios/ProjectManagerTest/QHLUtil”, :tag =&gt; “#{s.version}” }索引的，如果错了见找不到资源</p>
-</blockquote>
+</code></pre><p>完成依赖关联<br>b. 根据版本进行管理<br>进入QHLUtil文件目录，创建名为tags的文件，如图：<br><img src="/images/2017-03-18-2.png" alt="tags"><br>将tags文件夹同步到svn，打开Cornerstone，右击QHLUtil项目，创建改项目的一个版本tag，如图：<br><img src="/images/2017-03-18-3.png" alt="tag"><br>填写tag的信息<br><img src="/images/2017-03-18-4.png" alt="tag as"><br>Tag信息说明：<br>Tag As为版本号，将与QHLUtil.podspec文件中的s.version= “0.0.1”相同<br>Where为保存路径，保存在刚才创建的tags文件夹下，此目录要正确，因为关联时获取资源就是根据s.source= { :svn =&gt; “svn://192.168.6.5:9600/wzhouhui/app/ios/ProjectManagerTest/QHLUtil”, :tag =&gt; “#{s.version}” }索引的，如果错了见找不到资源<br>Revision为svn上代码的提交版本<br>点击“Create Tag”创建完成，此时，Cornerstone中项目的目录结构将如图所示:<br><img src="/images/2017-03-18-5.png" alt="content"><br>编辑QHLUtil.podspec文件（步骤同上）,将s.version值设置为刚才创建的Tag As号，当有多个tag时，设置为你要选择的版本号，保存退出编辑<br>执行</p>
+<pre><code>pod spec lint QHLUtil.podspec --allow-warnings
+</code></pre><p>检查信息是否有错，如果成功，来到ProjectManagerDemo目录，执行</p>
+<pre><code>pod install
+</code></pre></blockquote>
 </li>
-</ol>
-<blockquote>
-<p>Revision为svn上代码的提交版本</p>
-<p>点击“Create Tag”创建完成，此时，Cornerstone中项目的目录结构将如图所示:<br><img src="/images/2017-03-18-5.png" alt="content"><br>编辑QHLUtil.podspec文件（步骤同上）,将s.version值设置为刚才创建的Tag As号，当有多个tag时，设置为你要选择的版本号，保存退出编辑<br>执行<br>            pod spec lint QHLUtil.podspec –allow-warnings<br>检查信息是否有错，如果成功，来到ProjectManagerDemo目录，执行<br>            pod install</p>
-</blockquote>
-<ol>
-<li>更新新库，需要更新依赖库时，编辑QHLUtil.podspec文件中s.version设置为要依赖的库，执行<pre><code>pod update
+<li><p>更新新库，需要更新依赖库时，编辑QHLUtil.podspec文件中s.version设置为要依赖的库，执行</p>
+<pre><code>pod update
 </code></pre></li>
 </ol>
 
@@ -507,8 +505,17 @@ end
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -561,6 +568,22 @@ end
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#操作说明"><span class="nav-number">1.</span> <span class="nav-text">操作说明</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
