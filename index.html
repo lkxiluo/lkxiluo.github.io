@@ -378,16 +378,20 @@ pod &apos;QHLUtil&apos;, :svn=&gt;&apos;svn://192.168.6.5:9600/wzhouhui/app/ios/
 end
 </code></pre><p>svn://192.168.6.5:9600/wzhouhui/app/ios/ProjectManagerTest/QHLUtil为你私有库文件目录</p>
 </li>
-<li>建立依赖关系，这里有两种情况</li>
+<li>建立依赖关系，这里有两种情况<blockquote>
+<p>a. 直接执行命令</p>
+<pre><code>pod install
+</code></pre><p>完成依赖关联<br>b. 根据版本进行管理<br>进入QHLUtil文件目录，创建名为tags的文件，如图：<br><img src="/images/2017-03-18-2.png" alt="tags"><br>将tags文件夹同步到svn，打开Cornerstone，右击QHLUtil项目，创建改项目的一个版本tag，如图：<br><img src="/images/2017-03-18-3.png" alt="tag"><br>填写tag的信息<br><img src="/images/2017-03-18-4.png" alt="tag as"><br>Tag信息说明：<br>Tag As为版本号，将与QHLUtil.podspec文件中的s.version= “0.0.1”相同 </p>
+<p>Where为保存路径，保存在刚才创建的tags文件夹下，此目录要正确，因为关联时获取资源就是根据s.source= { :svn =&gt; “svn://192.168.6.5:9600/wzhouhui/app/ios/ProjectManagerTest/QHLUtil”, :tag =&gt; “#{s.version}” }索引的，如果错了见找不到资源</p>
+</blockquote>
+</li>
 </ol>
 <blockquote>
-<p>a. 直接执行命令<br>        pod install<br>完成依赖关联<br>b. 根据版本进行管理<br>进入QHLUtil文件目录，创建名为tags的文件，如图：<br><img src="/images/2017-03-18-2.png" alt="tags"><br>将tags文件夹同步到svn，打开Cornerstone，右击QHLUtil项目，创建改项目的一个版本tag，如图：<br><img src="/images/2017-03-18-3.png" alt="tag"><br>填写tag的信息<br><img src="/images/2017-03-18-4.png" alt="tag as"><br>Tag信息说明：<br>Tag As为版本号，将与QHLUtil.podspec文件中的s.version= “0.0.1”相同 </p>
-<p>Where为保存路径，保存在刚才创建的tags文件夹下，此目录要正确，因为关联时获取资源就是根据s.source= { :svn =&gt; “svn://192.168.6.5:9600/wzhouhui/app/ios/ProjectManagerTest/QHLUtil”, :tag =&gt; “#{s.version}” }索引的，如果错了见找不到资源</p>
 <p>Revision为svn上代码的提交版本</p>
-<p>点击“Create Tag”创建完成，此时，Cornerstone中项目的目录结构将如图所示:<br><img src="/images/2017-03-18-5.png" alt="content"><br>编辑QHLUtil.podspec文件（步骤同上）,将s.version= “0.0.1”值设置为刚才创建的Tag As号，当有多个tag时，设置为你要选择的版本号，保存退出编辑<br>执行<br>            pod spec lint QHLUtil.podspec –allow-warnings<br>检查信息是否有错，如果成功，来到ProjectManagerDemo目录，执行<br>            pod install</p>
+<p>点击“Create Tag”创建完成，此时，Cornerstone中项目的目录结构将如图所示:<br><img src="/images/2017-03-18-5.png" alt="content"><br>编辑QHLUtil.podspec文件（步骤同上）,将s.version值设置为刚才创建的Tag As号，当有多个tag时，设置为你要选择的版本号，保存退出编辑<br>执行<br>            pod spec lint QHLUtil.podspec –allow-warnings<br>检查信息是否有错，如果成功，来到ProjectManagerDemo目录，执行<br>            pod install</p>
 </blockquote>
 <ol>
-<li>跟新库，需要跟新依赖库是，编辑QHLUtil.podspec文件中s.version= “0.0.1”设置为要依赖的库，执行<pre><code>pod update
+<li>更新新库，需要更新依赖库时，编辑QHLUtil.podspec文件中s.version设置为要依赖的库，执行<pre><code>pod update
 </code></pre></li>
 </ol>
 
